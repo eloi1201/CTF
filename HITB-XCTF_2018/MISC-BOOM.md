@@ -2,7 +2,7 @@
 
 <img width="893" alt="screen shot 2018-04-21 at 7 57 18 pm" src="https://user-images.githubusercontent.com/14992494/39083973-70d5f5da-45a0-11e8-90f2-e0dae583e944.png">
 
-This question was memory forensic. Volatility was used to analysis windows memory dump file.
+This question was about memory forensic. Volatility was used to analyze windows memory dump file.
 
 ```
 root@kali:~/Desktop/xctf# volatility -f BOOM-6452e9b9.vmem imageinfo
@@ -23,7 +23,7 @@ Image Type (Service Pack) : 1
 Image local date and time : 2018-04-05 16:29:56 +0800
 ```
 
-Based on the resilt of cmdline command, suspicious doc file For_You.docx was found with 3316 PID.
+Based on the result of cmdline command, a suspicious doc file For_You.docx was found with 3316 PID.
 
 ```
 root@kali:~/Desktop/xctf# volatility -f BOOM-6452e9b9.vmem --profile Win7SP1x64 cmdline
@@ -279,7 +279,7 @@ Name                                                  Pid   PPid   Thds   Hnds T
 . 0xfffffa8001d74060:vmtoolsd.exe                    2632   2532      6    198 2018-04-04 15:30:26 UTC+0000
 ```
 
-Powershell script was embeded in the "Everything.exe". As this question description, the malicious downloader URL was the reason of this case.
+Powershell script was embeded in the "Everything.exe". Following this question description, the malicious downloader URL was the cause of this case.
 
 ```
 root@kali:~/Desktop/xctf# volatility -f BOOM-6452e9b9.vmem --profile Win7SP1x64 procdump -p 3764 -D ./
