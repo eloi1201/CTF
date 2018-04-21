@@ -2,7 +2,7 @@
 
 <img width="892" alt="screen shot 2018-04-21 at 6 11 40 pm" src="https://user-images.githubusercontent.com/14992494/39083472-d27a4ef8-4596-11e8-9d08-50c3fd45432d.png">
 
-The question file was image file which contains Keepass password database file.
+The question file was an image file which contains Keepass password database file.
 
 ```
 root@kali:~/Desktop/xctf# zsteg aee487a2-49cd-4f1f-ada6-b2d398342d99.SteinsGate 
@@ -19,7 +19,7 @@ root@kali:~/Desktop/xctf# file passwd.db
 passwd.db: Keepass password database 2.x KDBX
 ```
 
-Based on question description, the password db file had week password which combined with "hitb" and 6 digit of numbers. So developed simple python code to genenrate dictionary file.
+Based on the question description, the password db file had a weak password which combined with "hitb" and 6 digit numbers. So developed simple python code to genenrate a dictionary file.
 
 ```
 initStr = "hitb"
@@ -28,7 +28,7 @@ for i in range(0, 1000000):
     print initStr + "%06d" %i
 ```
 
-John the ripper supports cracking keepass2 password database, but it requires hash data of target password database file. The hash data was acquired by using keepass2john tool. 
+Keepass2 password db can be cracked by john the ripper, but it requires hash data of the target password db. The hash data was acquired by using keepass2john tool. 
 
 ```
 root@kali:~/Desktop/xctf# keepass2john passwd.db 
@@ -46,7 +46,7 @@ Use the "--show" option to display all of the cracked passwords reliably
 Session completed
 ```
 
-"hitb180408" is the password to open the keepass2 password database. Flag was found after opening password database file with the password.
+"hitb180408" is the password to open the keepass2 password db. A flag was found after opening the password db file with the password.
 
 <img width="553" alt="screen shot 2018-04-21 at 7 02 06 pm" src="https://user-images.githubusercontent.com/14992494/39083480-f36c92ec-4596-11e8-9406-e03e3944b33c.png">
 <img width="634" alt="screen shot 2018-04-21 at 7 02 46 pm" src="https://user-images.githubusercontent.com/14992494/39083484-f6e1453a-4596-11e8-9155-68cc60c8f253.png">
