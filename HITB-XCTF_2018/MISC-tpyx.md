@@ -2,7 +2,7 @@
 
 <img width="895" alt="screen shot 2018-04-21 at 2 33 48 pm" src="https://user-images.githubusercontent.com/14992494/39082594-51682488-4588-11e8-86c4-15ae0678b5b1.png">
 
-Downloaded png file had broken image structure. The png file didn't open properly even recovered CRC value. So binwalk tool was used to export hidden bianry.
+Downloaded a png file had a broken image structure. The png file was not open properly even after being recovered CRC value. So a binwalk tool was used to export hidden bianry from the image file.
 
 ```
 root@kali:~/Desktop/xctf# pngcheck e47c7307-b54c-4316-9894-5a8daec738b4.png 
@@ -32,7 +32,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 2675341       0x28D28D        Zlib compressed data, best compression
 ```
 
-The ASCII text file was found which comprised of HEX value after a few attempts of binwalk.
+The ASCII text file which comprised of HEX value was found after a few attempts of binwalk.
 
 ```
 root@kali:~/Desktop/xctf/_e47c7307-b54c-4316-9894-5a8daec738b4.png.extracted/_29.extracted# ls
@@ -43,7 +43,7 @@ root@kali:~/Desktop/xctf/_e47c7307-b54c-4316-9894-5a8daec738b4.png.extracted/_29
 377abcaf271c000382f96c91300000000000000073000000000000003c0e24409c429fdb08f31ebc2361b3016f04a79a070830334c68dd47db383e4b7246acad87460cd00ba62cfae68508182a69527a0104060001093000070b0100022406f107010a5307cb7afbfaec5aa07623030101055d0000010001000c2c2700080a01c35b933000000501110b0066006c00610067000000120a010000844bf3571cd101130a010000e669e866d1d301140a010080ffcdd963d1d301150601008000000000001800345172634f556d365761752b5675425838672b4950673d3d
 ```
 
-The HEX string was hexdump of 7z file which has password string at end of the 7z file.
+The HEX string was hexdump of 7z file which had password string at the end of the 7z file.
 
 ```
 Python 2.7.14+ (default, Feb  6 2018, 19:12:18) 
