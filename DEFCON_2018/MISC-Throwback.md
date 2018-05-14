@@ -6,7 +6,11 @@
 text = "Anyo!e!howouldsacrificepo!icyforexecu!!onspeedthink!securityisacomm!ditytop!urintoasy!tem!"
 ```
 
-A flag is hidden in text string. 
+The flag consists of transformed characters from exclamation marks in the text.
+
+For example, there are 4 characters to meet first exclamation mark in the text. So the first exclamation mark is "d" which is 4th character of alphabet. Then second exclamation mark is "a" starting character of alphabet.
+
+I got flag string after writing python script.
 
 ```
 Null2Root:~ eloi$ python
