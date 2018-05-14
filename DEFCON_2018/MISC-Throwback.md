@@ -1,6 +1,8 @@
-# Question
+# MISC-Throwback
+---
+<img width="778" alt="screen shot 2018-05-13 at 3 50 42 pm" src="https://user-images.githubusercontent.com/14992494/39997216-bb0dd9d0-57b4-11e8-831c-905c48540b1c.png">
 
-
+text = "Anyo!e!howouldsacrificepo!icyforexecu!!onspeedthink!securityisacomm!ditytop!urintoasy!tem!"
 
 ```
 Null2Root:~ eloi$ python
@@ -23,6 +25,6 @@ d a r k ` l o g i c `
 
 ```
 
-# Flag
+### Flag
 
 dark logic
