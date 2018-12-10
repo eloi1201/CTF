@@ -164,7 +164,7 @@ Legend: code, data, rodata, value
 0x000000000040009d in ?? ()
 gdb-peda$ 
 ```
-Binary runs XOR operation after taking 46(0x2e) bytes of strings.
+Binary runs XOR operation (input[i]^input[i+1]) after taking 46(0x2e) bytes of strings.
 
 The XOR result will be compared to strings in 0x40010C location through cmps function
 
@@ -211,8 +211,6 @@ Legend: code, data, rodata, value
 0x00000000004000b6 in ?? ()
 gdb-peda$ 
 ```
-
-
 
 
 ### Decryption code 
