@@ -7,7 +7,7 @@ Oh shit! Data have been stolen from my computer... I looked for malicious activi
 
 # Analysis
 
-This question provides a memory dump and ubuntu profile for memory forensic. The ubuntu profile appeared in volatility after moving to "/usr/local/Cellar/volatility/2.6.1/libexec/lib/python2.7/site-packages/volatility/plugins/overlays/linux" in MacOS.
+This question provides a memory dump and ubuntu profile for memory forensic. The ubuntu profile appeared in volatility after moving the given ubunto profile to "/usr/local/Cellar/volatility/2.6.1/libexec/lib/python2.7/site-packages/volatility/plugins/overlays/linux" in MacOS.
 
 ```
 eloi@NULL@ROOT linux % vol.py --info
